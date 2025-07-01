@@ -1,0 +1,261 @@
+
+
+body {
+  background-color: #FFE6EC;
+  font-family: 'Inter', sans-serif;
+  color: var(--texto-principal);
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 720px;
+  width: 100%;
+}
+
+.btn-voltar {
+  margin-bottom: 10px;
+}
+
+.btn-voltar a {
+  background-color: #F279A1;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.btn-voltar a:hover {
+  background-color: #EF2F7E;
+}
+
+.perfil-topo {
+  padding: 24px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  background: #FFE6EC;
+  box-shadow: 0 4px 12px var(--sombra);
+  animation: fadeIn 0.6s ease;
+}
+
+.info-usuario {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 240px;
+}
+
+.info-usuario img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 16px;
+  border: 3px solid var(--branco);
+}
+
+.dados h2 {
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: 700;
+}
+
+.dados p {
+  font-size: 14px;
+  color: var(--texto-secundario);
+}
+
+.botoes {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-editar,
+.btn-compartilhar {
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-editar {
+  background-color: #F279A1;
+}
+
+.btn-editar:hover {
+  background-color: #EF2F7E;
+  transform: translateY(-1px);
+}
+
+.btn-compartilhar {
+  background-color: #733CA7;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-compartilhar:hover {
+  background-color: #F279A1;
+  transform: translateY(-1px);
+}
+
+section {
+  background: #FFE6EC;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px var(--sombra);
+  transition: all 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+section h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #EF2F7E;
+}
+
+.conquistas h3 span {
+  font-size: 14px;
+  color: #EF2F7E;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.item img {
+  width: 32px;
+  margin-right: 10px;
+}
+
+.stats {
+  font-size: 14px;
+  color: var(--texto-secundario);
+  margin-top: 10px;
+}
+
+.avaliacao h4 {
+  margin-top: 14px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.estrela {
+  color: var(--estrela);
+  font-size: 20px;
+  margin: 6px 0;
+}
+
+.comentario {
+  font-size: 14px;
+  color: var(--texto-principal);
+  background: #FFE6EC;
+  padding: 10px;
+  border-left: 3px solid var(--btn-editar);
+  border-radius: 4px;
+}
+
+#copiado-msg {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#copiado-msg.mostrar {
+  display: block;
+  opacity: 1;
+}
+
+
+
+@media (max-width: 600px) {
+  .perfil-topo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .botoes {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .btn-editar,
+  .btn-compartilhar {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .info-usuario {
+    margin-bottom: 15px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-pic-container {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-right: 15px;
+}
+
+.profile-pic-container img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #EF2F7E;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 10px;
+  color: white;
+  border: 2px solid white;
+}

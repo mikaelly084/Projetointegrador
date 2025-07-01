@@ -1,0 +1,69 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalhes do Pedido</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="CSS/pedidos.css">
+  
+</head>
+<body>
+  <header class="topo">
+    <div class="btn-voltar">
+      <a href="minhaconta.html">◀ Voltar</a>
+    </div>
+    <div class="moedas">
+      <span>🪙 0</span>
+      <span>Moedas</span>
+    </div>
+  </header>
+
+  <div class="icones-infos">
+    <div><i class="fas fa-desktop"></i><br>Online</div>
+    <div><i class="fas fa-calendar-alt"></i><br>Próximos dias</div>
+    <div><i class="fas fa-info-circle"></i><br>Infos completas</div>
+  </div>
+
+  <div class="detalhes-pedido">
+    <h3>Bem-Estar - Personal Trainer</h3>
+    <p class="categoria">Aulas</p>
+    <ul>
+      <li><strong>📍 Onde quer treinar?</strong><br>Outros</li>
+      <li><strong>🔁 Com qual frequência?</strong><br>3x por semana</li>
+      <li><strong>🎯 Qual é o seu objetivo?</strong><br>Outros</li>
+      <li><strong>⏳ Para quando precisa do serviço?</strong><br>Nos próximos 7 dias</li>
+      <li><strong>🕒 Dias e horários:</strong><br>segunda, quarta e sexta</li>
+      <li><strong>📝 Informações adicionais:</strong><br>Preciso de treino para condicionamento físico. Tenho um pequeno espaço fitness no meu condomínio e gostaria de fazer neste espaço.</li>
+    </ul>
+  </div>
+
+  <div class="alerta-contato">
+    <i class="fas fa-lock"></i> Apenas um profissional liberou esse contato!
+  </div>
+
+  <div class="dados-cliente" id="dadosCliente">
+    <p><strong>Fernanda H.</strong></p>
+    <p>📞 (11) 9728....</p>
+    <p>📧 n****@****.com</p>
+    <p class="validado">✔️ Número de telefone validado</p>
+  </div>
+
+  <footer class="acoes">
+    <button class="btn-excluir" onclick="confirmarExclusao()">🗑️</button>
+    <button class="btn-liberar" onclick="liberarContato()">Liberar pedido <span>294 🪙</span></button>
+  </footer>
+
+  <script>
+    function liberarContato() {
+      document.getElementById('dadosCliente').classList.add('mostrar');
+      alert("✔️ Contato liberado com sucesso!");
+    }
+
+    function confirmarExclusao() {
+      if (confirm("Tem certeza que deseja excluir este pedido?")) {
+        alert("❌ Pedido excluído.");
+      }
+    }
+  </script>
+</body>
+</html>
