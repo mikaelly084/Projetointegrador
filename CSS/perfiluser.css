@@ -196,8 +196,75 @@ section h3 {
   opacity: 1;
 }
 
+.menu-compartilhar {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  z-index: 999;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 160px;
+}
+
+.menu-compartilhar.show {
+  display: flex;
+}
+
+.menu-compartilhar button,
+.menu-compartilhar a {
+  background-color: #F279A1;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-compartilhar button:hover,
+.menu-compartilhar a:hover {
+  background-color: #EF2F7E;
+}
+
+/*Portifólio*/
+.profile-pic-container {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-right: 15px;
+  
+}
+
+.profile-pic-container img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #EF2F7E;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 10px;
+  color: white;
+  border: 2px solid white;
+}
 
 
+/*Reponsivo*/
 @media (max-width: 600px) {
   .perfil-topo {
     flex-direction: column;
@@ -232,30 +299,3 @@ section h3 {
   }
 }
 
-.profile-pic-container {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  margin-right: 15px;
-}
-
-.profile-pic-container img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #fff;
-  cursor: pointer;
-}
-
-.edit-icon {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: #EF2F7E;
-  border-radius: 50%;
-  padding: 4px;
-  font-size: 10px;
-  color: white;
-  border: 2px solid white;
-}

@@ -1,3 +1,4 @@
+/* RESET GERAL */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,40 @@ body {
   padding-bottom: 80px;
 }
 
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFE6EC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Inter', sans-serif;
+  color: #EF2F7E;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.spinner {
+  border: 5px solid #f3f3f3; /* Cor clara da borda */
+  border-top: 5px solid #EF2F7E; /* Cor da borda animada */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* CABEÇALHO */
 .header {
   background: #FFE6EC;
   padding: 20px;
@@ -20,6 +55,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+/* PERFIL */
 .profile {
   display: flex;
   align-items: center;
@@ -28,15 +64,6 @@ body {
   border-radius: 12px;
   margin: 15px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.profile img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 15px;
-  border: 2px solid #fff;
 }
 
 .profile-info h3 {
@@ -50,6 +77,54 @@ body {
   margin-top: 4px;
 }
 
+/* FOTO DE PERFIL */
+.profile-pic-container {
+  position: relative;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.profile-pic-container img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #EF2F7E;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 10px;
+  color: white;
+  border: 2px solid white;
+}
+
+/* BOTÃO ALTERAR FOTO */
+.change-photo-btn {
+  margin-top: 10px;
+  background-color: #F279A1;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.change-photo-btn:hover {
+  background-color: #EF2F7E;
+}
+
+/* SEÇÕES */
 .section {
   background-color: #FFE6EC;
   padding: 15px 20px;
@@ -62,13 +137,11 @@ body {
   transition: background 0.2s, transform 0.2s;
   text-decoration: none;
   color: inherit;
-  
 }
 
 .section:hover {
-  background-color: #f9f9f9;
+  background-color: #F9A4B4;
   transform: translateY(-2px);
-  background: #F9A4B4;
 }
 
 .section span {
@@ -82,9 +155,16 @@ body {
   font-size: 18px;
   margin-right: 10px;
   color: white;
-  
 }
 
+/*LINKS*/
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* RODAPÉ */
 .footer-text {
   text-align: center;
   margin-top: 30px;
@@ -92,7 +172,7 @@ body {
   color: #aaa;
 }
 
-/* Navegação inferior */
+/* NAVEGAÇÃO INFERIOR */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -104,22 +184,21 @@ body {
   padding: 10px 0;
   border-top: 1px solid #ddd;
   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
-  
 }
-.bottom-nav div:hover {
-  background: #EF2F7E;
-  font-weight: 600; /* estava com '600px', o que é inválido */
-  color: white;
-  border-radius: 6px;
-  padding: 6px;
-}
-
 
 .bottom-nav div {
   text-align: center;
   font-size: 12px;
   color: white;
   text-decoration: none;
+}
+
+.bottom-nav div:hover {
+  background: #EF2F7E;
+  font-weight: 600;
+  color: white;
+  border-radius: 6px;
+  padding: 6px;
 }
 
 .bottom-nav i {
@@ -129,10 +208,80 @@ body {
 }
 
 .bottom-nav .active {
-  color:  white;
+  color: white;
   font-weight: 600;
 }
 
+/* MODAL DE CONFIRMAÇÃO */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #FFE6EC;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 300px;
+}
+
+.modal h2 {
+  color: #EF2F7E;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  color: #121112;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  width: 100px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#confirm-yes {
+  background-color: #F279A1;
+  color: white;
+}
+
+#confirm-no {
+  background-color: #733CA7;
+  color: white;
+}
+
+#confirm-yes:hover {
+  background-color: #c71e66;
+}
+
+#confirm-no:hover {
+  background-color: #F279A1;
+}
+
+/* RESPONSIVO */
 @media (max-width: 600px) {
   .header {
     font-size: 18px;
@@ -141,13 +290,13 @@ body {
 
   .profile {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 16px;
     margin: 10px;
   }
 
-  .profile img {
-    margin: 0 0 10px 0;
+  .profile-pic-container {
+    margin-bottom: 10px;
   }
 
   .profile-info h3 {
@@ -194,32 +343,3 @@ body {
     margin-bottom: 2px;
   }
 }
-
-.profile-pic-container {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  margin-right: 15px;
-}
-
-.profile-pic-container img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #fff;
-  cursor: pointer;
-}
-
-.edit-icon {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: #EF2F7E;
-  border-radius: 50%;
-  padding: 4px;
-  font-size: 10px;
-  color: white;
-  border: 2px solid white;
-}
-
