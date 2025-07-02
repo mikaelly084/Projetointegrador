@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #FFE6EC;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,8 +23,8 @@ body {
 }
 
 .btn-voltar a {
-  background-color: #F279A1;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 10px 18px;
   border-radius: 8px;
   text-decoration: none;
@@ -38,10 +38,10 @@ body {
   width: 100%;
   max-width: 360px;
   color: #EF2F7E;
-  background-color: #FFE6EC;
+  background-color: white;
   border: 1px solid #dbdbdb;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 30px 20px;
 }
 
@@ -49,13 +49,13 @@ body {
   text-align: center;
   font-size: 20px;
   margin-bottom: 20px;
-  color: #EF2F7E
+  color: #EF2F7E;
 }
 
 .info {
   margin-bottom: 30px;
   font-size: 14px;
-  color: #333;
+  color: black;
 }
 
 .info p {
@@ -76,7 +76,7 @@ input {
 }
 
 input:focus {
-  border-bottom: 1px solid #F279A1;
+  border-bottom: 1px solid #EF2F7E;
 }
 
 ::placeholder {
@@ -93,11 +93,12 @@ input:focus {
   cursor: pointer;
   margin-top: 10px;
   transition: background-color 0.3s;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 .btn.salvar {
-  background-color: #F279A1;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .btn.salvar:hover {
@@ -105,12 +106,12 @@ input:focus {
 }
 
 .btn.excluir {
-  background-color: #733CA7;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .btn.excluir:hover {
-  background-color:  #F279A1;
+  background-color: #733CA7;
 }
 
 @media (max-width: 480px) {

@@ -1,10 +1,12 @@
-// window.addEventListener('load', () => {
-//   const loadingScreen = document.getElementById('loading-screen');
-//   if (loadingScreen) {
-//     loadingScreen.style.display = 'none';
-//   }
-// });
-
+window.addEventListener('load', () => {
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen) {
+    // Espera 5 segundos (5000 milissegundos) antes de ocultar a tela de carregamento
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 2000);
+  }
+});
 
 const input = document.getElementById('upload-photo');
 const image = document.getElementById('profile-image');

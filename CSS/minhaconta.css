@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #FFE6EC;
+  background-color: white;
   padding-bottom: 80px;
 }
 
@@ -17,7 +17,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #FFE6EC;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,12 +46,12 @@ body {
 
 /* CABEÇALHO */
 .header {
-  background: #FFE6EC;
+  background: #EF2F7E;
   padding: 20px;
   text-align: center;
   font-size: 20px;
   font-weight: 600;
-  color: #EF2F7E;
+  color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -60,7 +60,7 @@ body {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: #FFE6EC;
+  background: white;
   border-radius: 12px;
   margin: 15px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -73,7 +73,7 @@ body {
 
 .profile-info p {
   font-size: 14px;
-  color: #777;
+  color: black;
   margin-top: 4px;
 }
 
@@ -108,8 +108,8 @@ body {
 /* BOTÃO ALTERAR FOTO */
 .change-photo-btn {
   margin-top: 10px;
-  background-color: #F279A1;
-  color: white;
+  background-color: #EF2F7E;
+  color: black;
   border: none;
   padding: 6px 12px;
   font-size: 13px;
@@ -126,7 +126,7 @@ body {
 
 /* SEÇÕES */
 .section {
-  background-color: #FFE6EC;
+  background-color: white;
   padding: 15px 20px;
   margin: 8px 15px;
   border-radius: 10px;
@@ -140,7 +140,7 @@ body {
 }
 
 .section:hover {
-  background-color: #F9A4B4;
+  background-color: #EF2F7E;
   transform: translateY(-2px);
 }
 
@@ -148,13 +148,13 @@ body {
   display: flex;
   align-items: center;
   font-size: 16px;
-  color: #555;
+  color: black;
 }
 
 .section i {
   font-size: 18px;
   margin-right: 10px;
-  color: white;
+  color: black;
 }
 
 /*LINKS*/
@@ -169,7 +169,7 @@ a {
   text-align: center;
   margin-top: 30px;
   font-size: 13px;
-  color: #aaa;
+  color: black;
 }
 
 /* NAVEGAÇÃO INFERIOR */
@@ -178,7 +178,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #F9A4B4;
+  background-color:white;
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
@@ -189,7 +189,7 @@ a {
 .bottom-nav div {
   text-align: center;
   font-size: 12px;
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -208,7 +208,7 @@ a {
 }
 
 .bottom-nav .active {
-  color: white;
+  color:black;
   font-weight: 600;
 }
 
@@ -227,7 +227,7 @@ a {
 }
 
 .modal {
-  background: #FFE6EC;
+  background: white;
   padding: 30px;
   border-radius: 12px;
   text-align: center;
@@ -242,7 +242,7 @@ a {
 }
 
 .modal p {
-  color: #121112;
+  color: black;
   margin-bottom: 10px;
   font-size: 15px;
 }
@@ -264,21 +264,21 @@ a {
 }
 
 #confirm-yes {
-  background-color: #F279A1;
-  color: white;
+  background-color: #EF2F7E;
+  color: black;
 }
 
 #confirm-no {
   background-color: #733CA7;
-  color: white;
+  color: black;
 }
 
 #confirm-yes:hover {
-  background-color: #c71e66;
+  background-color: white;
 }
 
 #confirm-no:hover {
-  background-color: #F279A1;
+  background-color: white;
 }
 
 /* RESPONSIVO */
