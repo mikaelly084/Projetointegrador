@@ -61,7 +61,7 @@ function atualizarLinksCompartilhamento() {
   const url = encodeURIComponent(window.location.href);
   const whatsapp = document.getElementById('btnWhatsApp');
   const facebook = document.getElementById('btnFacebook');
-  const instagram = document.getElementById('btnInstagram'); // Corrigido: nome minúsculo
+  // const instagram = document.getElementById('btnInstagram'); // Corrigido: nome minúsculo
 
   if (whatsapp) {
     whatsapp.href = `https://wa.me/?text=${url}`;
@@ -72,11 +72,14 @@ function atualizarLinksCompartilhamento() {
   }
 
   // Instagram não permite compartilhamento direto via URL pública
-  if (instagram) {
-    alert("O Instagram não suporta compartilhamento direto via link.");
-    instagram.style.display = "none"; // Opcional: esconde botão se quiser
-  }
+  // if (instagram) {
+  //   alert("O Instagram não suporta compartilhamento direto via link.");
+  //   instagram.style.display = "none"; // Opcional: esconde botão se quiser
+  // }
 }
+
+
+
 
 
 
