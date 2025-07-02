@@ -41,8 +41,8 @@ p {
   display: inline-block;
   margin-top: -15px;
   padding: 10px 16px;
-  background-color: white;
-  color: black;
+  background-color: #EF2F7E;
+  color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
@@ -51,7 +51,7 @@ p {
 }
 
 .voltar:hover {
-  background-color: #EF2F7E;
+  background-color: white;
   
 }
 

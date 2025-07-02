@@ -23,15 +23,15 @@ body {
 }
 
 .btn-voltar a {
-  background-color: white;
-  color: black;
+  background-color: #EF2F7E;
+  color: white;
   padding: 10px 18px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
 }
 .btn-voltar a:hover {
-  background-color: #EF2F7E;
+  background-color: white;
 }
 
 .form-container {
@@ -97,21 +97,21 @@ input:focus {
 }
 
 .btn.salvar {
-  background-color: white;
-  color: black;
+  background-color: #EF2F7E;
+  color: white;
 }
 
 .btn.salvar:hover {
-  background-color: #EF2F7E;
+  background-color: rgba(255, 255, 255, 0.109);
 }
 
 .btn.excluir {
-  background-color: white;
-  color: black;
+  background-color: #EF2F7E;
+  color: white;
 }
 
 .btn.excluir:hover {
-  background-color: #733CA7;
+  background-color: white;
 }
 
 @media (max-width: 480px) {
