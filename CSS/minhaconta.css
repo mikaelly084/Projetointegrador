@@ -265,21 +265,29 @@ a {
 
 #confirm-yes {
   background-color: #EF2F7E;
-  color: black;
+  color: white;
 }
 
 #confirm-no {
-  background-color: #733CA7;
-  color: black;
+   background-color: #EF2F7E;
+  color: white;
 }
 
-#confirm-yes:hover {
-  background-color: white;
-}
+/* #confirm-yes:hover {
+  background-color: rgba(255, 255, 255, 0.7); 
+  color: #EF2F7E;
+  border: 2px solid #EF2F7E;
+  backdrop-filter: blur(2px);
+} */
 
-#confirm-no:hover {
-  background-color: white;
-}
+/* #confirm-no:hover {
+  background-color: rgba(255, 255, 255, 0.7); 
+  color: #EF2F7E;
+  border: 2px solid #EF2F7E;
+  backdrop-filter: blur(2px);
+} */
+
+
 
 /* RESPONSIVO */
 @media (max-width: 600px) {

@@ -1,4 +1,12 @@
-
+:root {
+  --radius: 10px;
+  --sombra: rgba(0, 0, 0, 0.1);
+  --texto-principal: #333;
+  --texto-secundario: #666;
+  --branco: #fff;
+  --estrela: gold;
+  --btn-editar: #EF2F7E;
+}
 
 body {
   background-color: white;
@@ -18,6 +26,7 @@ main {
 
 .btn-voltar {
   margin-bottom: 10px;
+  
 }
 
 .btn-voltar a {
@@ -27,13 +36,18 @@ main {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
   display: inline-block;
+  border: 2px solid transparent;
+  border:white ;
 }
 
-.btn-voltar a:hover {
-  background-color: white;
-}
+/* .btn-voltar a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #EF2F7E;
+  border: 2px solid #EF2F7E;
+  backdrop-filter: blur(2px);
+} */
 
 .perfil-topo {
   padding: 24px;
@@ -43,9 +57,9 @@ main {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 20px;
-  background: #FFE6EC;
+  background-color: #FFE6EC;
   box-shadow: 0 4px 12px var(--sombra);
-  animation: fadeIn 0.6s ease;
+  animation: fadeIn 0.6s ease both;
 }
 
 .info-usuario {
@@ -93,13 +107,15 @@ main {
 
 .btn-editar {
   background-color: #EF2F7E;
+  border: 2px solid transparent;
 }
 
-.btn-editar:hover {
-  background-color: white;
-  
-  transform: translateY(-1px);
-}
+/* .btn-editar:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #EF2F7E;
+  border: 2px solid #EF2F7E;
+  backdrop-filter: blur(2px);
+} */
 
 .btn-compartilhar {
   background-color: #EF2F7E;
@@ -107,16 +123,16 @@ main {
   cursor: pointer;
 }
 
-.btn-compartilhar:hover {
-  background: white;
- 
-  transform: translateY(-1px);
-}
+/* .btn-compartilhar:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #EF2F7E;
+  border: 2px solid #EF2F7E;
+  backdrop-filter: blur(2px);
+} */
 
 section {
   background: white;
-  margin-bottom: 20px;
-  margin-top: 15px;
+  margin: 15px 0 20px 0;
   padding: 20px;
   border-radius: var(--radius);
   box-shadow: 0 4px 10px var(--sombra);
@@ -156,17 +172,7 @@ section h3 {
   margin-top: 10px;
 }
 
-.avaliacao h4 {
-  margin-top: 14px;
-  font-size: 15px;
-  font-weight: 600;
-}
 
-.estrela {
-  color: var(--estrela);
-  font-size: 20px;
-  margin: 6px 0;
-}
 
 .comentario {
   font-size: 14px;
@@ -205,7 +211,7 @@ section h3 {
   background-color: white;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   z-index: 999;
   flex-direction: column;
   gap: 8px;
@@ -233,15 +239,15 @@ section h3 {
 .menu-compartilhar button:hover,
 .menu-compartilhar a:hover {
   background-color: #EF2F7E;
+  color: white;
 }
 
-/*Portifólio*/
+/* Portfólio */
 .profile-pic-container {
   position: relative;
   width: 64px;
   height: 64px;
   margin-right: 15px;
-  
 }
 
 .profile-pic-container img {
@@ -266,7 +272,34 @@ section h3 {
 }
 
 
-/*Reponsivo*/
+.estrelas span {
+  font-size: 30px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+.estrelas span.ativa {
+  color: gold;
+}
+.comentario {
+  background-color: #f0f0f0;
+  border: #EF2F7E;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+  #enviarComentario{
+    background: #EF2F7E;
+    color: #fff;
+    border: #fff;
+    border-radius: 3px;
+    height: 30px;
+    font-weight: bold;
+  }
+
+
+/* Responsivo */
 @media (max-width: 600px) {
   .perfil-topo {
     flex-direction: column;
@@ -294,10 +327,8 @@ section h3 {
     opacity: 0;
     transform: translateY(10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
