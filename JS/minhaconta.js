@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     // Espera 5 segundos (5000 milissegundos) antes de ocultar a tela de carregamento
     setTimeout(() => {
       loadingScreen.style.display = 'none';
-    }, 2000);
+    }, 1000);
   }
 });
 
@@ -40,3 +40,4 @@ confirmYes.addEventListener('click', function () {
 confirmNo.addEventListener('click', function () {
   modal.style.display = 'none'; // Esconde o modal
 });
+

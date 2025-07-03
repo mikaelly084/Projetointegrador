@@ -25,7 +25,7 @@
   </div>
   <div class="profile-info">
     <h3>Joyce Santos</h3>
-    <p>Aulas · Esoterismo · Reiki</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate reiciendis et nam consequuntur officia aliquam velit doloremque reprehenderit repellendus, vitae culpa architecto ipsam unde. Vero quo temporibus corrupti id nobis.</p>
   </div>
 </div>
     <div class="botoes">
@@ -45,7 +45,7 @@
     <h3>Minhas conquistas <span>(1/3)</span></h3>
     <div class="item">
       <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Ícone da conquista Ninja verificado" />
-      <span>Ninja verificado</span>
+      <span>Verificado</span>
     </div>
     <div class="stats">
       <p>📌 9 serviços negociados</p>
@@ -53,16 +53,27 @@
     </div>
   </section>
 
-  <section class="avaliacao">
-    <h3>Nota média</h3>
-    <p><strong>5.0</strong> – 1 avaliação</p>
-    <h4>Laura, há 2 anos:</h4>
-    <div class="estrela">⭐⭐⭐⭐⭐</div>
-    <p class="comentario">
-      “As aulas do Guilherme são maravilhosas! Dinâmicas, diretas e bem elaboradas.
-      Além do mais, ele é um querido e super pontual. Eu indico muito o Guilherme como perso...”
-    </p>
-  </section>
+  <div id="avaliacoes">
+    <h3 style="color: #EF2F7E;">Nota Média: <span id="nota-media">0.0</span> ⭐</h3>
+  
+    <!-- Estrelas de avaliação -->
+    <div class="estrelas" id="selecao-estrelas">
+      <span data-value="1">★</span>
+      <span data-value="2">★</span>
+      <span data-value="3">★</span>
+      <span data-value="4">★</span>
+      <span data-value="5">★</span>
+    </div>
+  
+    <!-- Campo de comentário -->
+    <textarea id="comentario" placeholder="Escreva seu comentário..." rows="4" style="width: 100%; margin-top: 10px;"></textarea>
+    <button id="enviarComentario" style="margin-top: 10px;">Enviar Avaliação</button>
+  
+    <!-- Lista de comentários -->
+    <div id="lista-comentarios" style="margin-top: 20px;"></div>
+  </div>
+  
+  
 
   <div id="copiado-msg">🔗 Link copiado!</div>
 </main>
