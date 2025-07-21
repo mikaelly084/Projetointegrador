@@ -50,12 +50,10 @@ p {
   /* float: right; */
 }
 
-/* .voltar:hover {
-  background-color: rgba(255, 255, 255, 0); /* branco transparente 
-  color: #EF2F7E;
-  border: 2px solid #EF2F7E;
-  backdrop-filter: blur(10px); opcional: efeito fosco sutil 
-}*/
+ .voltar:hover {
+    background-color: #F279A1;
+    
+  }
 
 @media (max-width: 600px) {
   .container {

@@ -1,13 +1,3 @@
-:root {
-  --radius: 10px;
-  --sombra: rgba(0, 0, 0, 0.1);
-  --texto-principal: #333;
-  --texto-secundario: #666;
-  --branco: #fff;
-  --estrela: gold;
-  --btn-editar: #EF2F7E;
-}
-
 body {
   background-color: white;
   font-family: 'Inter', sans-serif;
@@ -26,11 +16,10 @@ main {
 
 .btn-voltar {
   margin-bottom: 10px;
-  
 }
 
 .btn-voltar a {
-  background-color: #EF2F7E;
+  background-color:#EF2F7E;
   color: white;
   padding: 10px 16px;
   border-radius: 8px;
@@ -38,97 +27,78 @@ main {
   font-weight: bold;
   transition: all 0.3s ease;
   display: inline-block;
-  border: 2px solid transparent;
-  border:white ;
 }
 
-/* .btn-voltar a:hover {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #EF2F7E;
-  border: 2px solid #EF2F7E;
-  backdrop-filter: blur(2px);
-} */
+ .btn-voltar a:hover {
+    background: #F279A1;
+    
+  }
 
-.perfil-topo {
-  padding: 24px;
-  border-radius: var(--radius);
+.profile {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  background-color: #FFE6EC;
-  box-shadow: 0 4px 12px var(--sombra);
-  animation: fadeIn 0.6s ease both;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
-.info-usuario {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  min-width: 240px;
+.profile-pic-container {
+  position: relative;
+  width: 64px;
+  height: 64px;
 }
 
-.info-usuario img {
-  width: 70px;
-  height: 70px;
+.profile-pic-container img {
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  margin-right: 16px;
-  border: 3px solid var(--branco);
+  object-fit: cover;
+  border: 2px solid black;
+  cursor: pointer;
 }
 
-.dados h2 {
-  font-size: clamp(18px, 4vw, 24px);
-  font-weight: 700;
+.edit-icon {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background-color: #EF2F7E; /* rosa */
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 12px;
+  color: white;
+  border: 2px solid white;
+  width: 10px;
+  height: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dados p {
-  font-size: 14px;
-  color: var(--texto-secundario);
-}
 
 .botoes {
   display: flex;
   gap: 12px;
-  margin-top: 10px;
   flex-wrap: wrap;
 }
 
 .btn-editar,
 .btn-compartilhar {
+  background-color: #EF2F7E;
   padding: 10px 18px;
   border-radius: 6px;
   font-weight: 600;
   font-size: 14px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: all 0.3s ease;
-}
-
-.btn-editar {
-  background-color: #EF2F7E;
-  border: 2px solid transparent;
-}
-
-/* .btn-editar:hover {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #EF2F7E;
-  border: 2px solid #EF2F7E;
-  backdrop-filter: blur(2px);
-} */
-
-.btn-compartilhar {
-  background-color: #EF2F7E;
   border: none;
   cursor: pointer;
 }
 
-/* .btn-compartilhar:hover {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: #EF2F7E;
-  border: 2px solid #EF2F7E;
-  backdrop-filter: blur(2px);
-} */
+.btn-editar:hover,
+.btn-compartilhar:hover {
+  background: #F279A1;
+}
+
 
 section {
   background: white;
@@ -147,12 +117,12 @@ section:hover {
 section h3 {
   font-size: 18px;
   margin-bottom: 16px;
-  color: #EF2F7E;
+  color: var(--btn-editar);
 }
 
 .conquistas h3 span {
   font-size: 14px;
-  color: #EF2F7E;
+  color: var(--btn-editar);
 }
 
 .item {
@@ -172,15 +142,37 @@ section h3 {
   margin-top: 10px;
 }
 
+.estrelas span {
+  font-size: 30px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
 
+.estrelas span.ativa {
+  color: var(--estrela);
+}
 
 .comentario {
-  font-size: 14px;
-  color: var(--texto-principal);
-  background: white;
+  background-color: #f0f0f0;
+  border-left: 4px solid var(--btn-editar);
   padding: 10px;
-  border-left: 3px solid var(--btn-editar);
-  border-radius: 4px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#enviarComentario {
+  background: var(--btn-editar);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#enviarComentario:hover {
+ background: #FFE6EC;
 }
 
 #copiado-msg {
@@ -190,7 +182,7 @@ section h3 {
   left: 50%;
   transform: translateX(-50%);
   background: #333;
-  color: black;
+  color: white;
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 14px;
@@ -238,70 +230,21 @@ section h3 {
 
 .menu-compartilhar button:hover,
 .menu-compartilhar a:hover {
-  background-color: #EF2F7E;
+  background: #EF2F7E;
   color: white;
 }
 
-/* Portfólio */
-.profile-pic-container {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  margin-right: 15px;
+#enviarComentario{
+  margin-top: 10px;
+  background: #EF2F7E;
 }
 
-.profile-pic-container img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid black;
-  cursor: pointer;
+#enviarComentario:hover{
+  background: #F9A4B4;
 }
 
-.edit-icon {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: #EF2F7E;
-  border-radius: 50%;
-  padding: 4px;
-  font-size: 10px;
-  color: white;
-  border: 2px solid white;
-}
-
-
-.estrelas span {
-  font-size: 30px;
-  cursor: pointer;
-  color: #ccc;
-  transition: color 0.3s;
-}
-.estrelas span.ativa {
-  color: gold;
-}
-.comentario {
-  background-color: #f0f0f0;
-  border: #EF2F7E;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-  #enviarComentario{
-    background: #EF2F7E;
-    color: #fff;
-    border: #fff;
-    border-radius: 3px;
-    height: 30px;
-    font-weight: bold;
-  }
-
-
-/* Responsivo */
 @media (max-width: 600px) {
-  .perfil-topo {
+  .profile {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -315,10 +258,6 @@ section h3 {
   .btn-compartilhar {
     width: 100%;
     max-width: 200px;
-  }
-
-  .info-usuario {
-    margin-bottom: 15px;
   }
 }
 
