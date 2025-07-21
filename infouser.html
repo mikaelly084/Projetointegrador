@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Meu Perfil</title>
-  <link rel="stylesheet" href="CSS/infouser.css">
+  <link rel="stylesheet" href="CSS/infouser.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="btn-voltar">
-    <a href="perfiluser.html">Voltar</a>
-  </div>
+ 
 
   <div class="form-container">
+    <div class="btn-voltar">
+    <a href="perfiluser.html">◀ Voltar</a>
+  </div>
     <h2>Meus Dados</h2>
 
     <div class="info">
@@ -37,30 +38,28 @@
     </form>
   </div>
 
-<!-- Modal de Logout -->
-<div id="confirm-modal" class="modal">
-  <div class="modal-content">
-    <h3>Deseja realmente sair?</h3>
-    <div class="modal-botoes">
-      <button id="confirm-yes" class="btn excluir">Sim, sair</button>
-      <button id="confirm-no" class="btn cancelar">Cancelar</button>
+  <!-- Modal de Logout -->
+  <div id="confirm-modal" class="modal">
+    <div class="modal-content">
+      <h3>Deseja realmente sair?</h3>
+      <div class="modal-botoes">
+        <button id="confirm-yes" class="btn excluir">Sim, sair</button>
+        <button id="confirm-no" class="btn cancelar">Cancelar</button>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Modal de Excluir Conta -->
-<div id="modalExcluir" class="modal">
-  <div class="modal-content">
-    <h3>Tem certeza que deseja excluir sua conta?</h3>
-    <p>Essa ação não poderá ser desfeita.</p>
-    <div class="modal-botoes">
-      <button id="confirmarExcluir" class="btn excluir">Sim, excluir</button>
-      <button id="cancelarExcluir" class="btn cancelar">Cancelar</button>
+  <!-- Modal de Excluir Conta -->
+  <div id="modalExcluir" class="modal">
+    <div class="modal-content">
+      <h3>Tem certeza que deseja excluir sua conta?</h3>
+      <p>Essa ação não poderá ser desfeita.</p>
+      <div class="modal-botoes">
+        <button id="confirmarExcluir" class="btn excluir">Sim, excluir</button>
+        <button id="cancelarExcluir" class="btn cancelar">Cancelar</button>
+      </div>
     </div>
   </div>
-</div>
-
-
 
   <script src="JS/infouser.js"></script>
 </body>
